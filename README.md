@@ -4,7 +4,7 @@ Bài thực hành kiểm tra môn **Lập trình ứng dụng di động**, Khoa
 
 - Họ tên: Kiều Bảo Giang
 - MSSV: 2474802010095
-- Nhánh hiện tại: `cau-2`
+- Nhánh hiện tại: `cau-3`
 
 ## Công nghệ sử dụng
 
@@ -20,13 +20,14 @@ Bài thực hành kiểm tra môn **Lập trình ứng dụng di động**, Khoa
 | `main` | Project khởi tạo ban đầu |
 | `cau-1` | Câu 1: màn hình Login và kiểm tra dữ liệu |
 | `cau-2` | Câu 2: chuyển sang ProfileActivity, truyền email qua Intent (kế thừa `cau-1`) |
+| `cau-3` | Câu 3: danh sách kỹ năng bằng ListView và ArrayAdapter (kế thừa `cau-2`) |
 
 ## Cách chạy
 
 ```bash
 git clone https://github.com/Zang-1/KiemTra_LapTrinhUngDungDiDong_2474802010095.git
 cd KiemTra_LapTrinhUngDungDiDong_2474802010095
-git checkout cau-2
+git checkout cau-3
 ```
 
 Mở thư mục bằng Android Studio, chờ Gradle sync xong rồi bấm **Run** trên máy ảo hoặc máy thật.
@@ -61,3 +62,16 @@ Mở thư mục bằng Android Studio, chờ Gradle sync xong rồi bấm **Run*
 ## Minh chứng Câu 2
 
 ![Profile Intent](screenshots/cau2_profile_intent.png)
+
+## Câu 3: Hiển thị danh sách bằng ListView và ArrayAdapter
+
+- Thêm `ListView` vào `activity_profile.xml`, nằm dưới phần email và nút **Log Out**, ánh xạ bằng `findViewById`.
+- Dữ liệu mẫu gồm 5 kỹ năng: Kotlin Programming, XML Layout Design, Git/GitHub Management, Intent Processing, Android Architecture.
+- Dùng `ArrayAdapter` với layout mẫu `android.R.layout.simple_list_item_1` để đổ dữ liệu vào ListView.
+- `setOnItemClickListener`: chạm vào một kỹ năng sẽ hiện Toast thông báo đúng tên kỹ năng đó.
+
+## Minh chứng Câu 3
+
+| Danh sách hiển thị | Toast khi chọn một kỹ năng |
+|---|---|
+| ![ListView Display](screenshots/cau3_listview_display.png) | ![Item Click Toast](screenshots/cau3_item_click_toast.png) |

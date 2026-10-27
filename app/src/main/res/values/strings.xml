@@ -16,4 +16,5 @@
     <!-- ProfileActivity -->
     <string name="profile_header">Account Information</string>
     <string name="log_out">Log Out</string>
+    <string name="skill_selected">You selected: %1$s</string>
 </resources>
