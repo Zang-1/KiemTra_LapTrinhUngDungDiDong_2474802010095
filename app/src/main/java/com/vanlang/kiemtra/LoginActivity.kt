@@ -1,5 +1,6 @@
 package com.vanlang.kiemtra
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.Button
@@ -47,6 +48,13 @@ class LoginActivity : AppCompatActivity() {
                 else -> R.string.validation_success
             }
             tvStatus.text = getString(message)
+
+            if (message == R.string.validation_success) {
+                // Intent tường minh sang ProfileActivity, gửi kèm email qua putExtra
+                val intent = Intent(this, ProfileActivity::class.java)
+                intent.putExtra(ProfileActivity.EXTRA_EMAIL, email)
+                startActivity(intent)
+            }
         }
     }
 }

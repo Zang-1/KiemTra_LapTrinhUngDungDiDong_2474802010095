@@ -4,7 +4,7 @@ Bài thực hành kiểm tra môn **Lập trình ứng dụng di động**, Khoa
 
 - Họ tên: Kiều Bảo Giang
 - MSSV: 2474802010095
-- Nhánh hiện tại: `cau-1`
+- Nhánh hiện tại: `cau-2`
 
 ## Công nghệ sử dụng
 
@@ -19,13 +19,14 @@ Bài thực hành kiểm tra môn **Lập trình ứng dụng di động**, Khoa
 |---|---|
 | `main` | Project khởi tạo ban đầu |
 | `cau-1` | Câu 1: màn hình Login và kiểm tra dữ liệu |
+| `cau-2` | Câu 2: chuyển sang ProfileActivity, truyền email qua Intent (kế thừa `cau-1`) |
 
 ## Cách chạy
 
 ```bash
 git clone https://github.com/Zang-1/KiemTra_LapTrinhUngDungDiDong_2474802010095.git
 cd KiemTra_LapTrinhUngDungDiDong_2474802010095
-git checkout cau-1
+git checkout cau-2
 ```
 
 Mở thư mục bằng Android Studio, chờ Gradle sync xong rồi bấm **Run** trên máy ảo hoặc máy thật.
@@ -49,3 +50,14 @@ Mở thư mục bằng Android Studio, chờ Gradle sync xong rồi bấm **Run*
 | Dữ liệu không hợp lệ | Dữ liệu hợp lệ |
 |---|---|
 | ![Validation Error](screenshots/cau1_validation_error.png) | ![Validation Success](screenshots/cau1_validation_success.png) |
+
+## Câu 2: Chuyển màn hình và truyền dữ liệu bằng Intent
+
+- `ProfileActivity` (`activity_profile.xml`, ConstraintLayout) gồm tiêu đề **Account Information**, TextView hiển thị email và nút **Log Out**.
+- Khi dữ liệu hợp lệ, `LoginActivity` dùng **Intent tường minh** mở `ProfileActivity` và gửi email qua `putExtra()`.
+- `ProfileActivity` lấy email bằng `getStringExtra()` và hiển thị lên TextView.
+- Nút **Log Out** gọi `finish()` để đóng màn hình hiện tại và quay lại `LoginActivity`.
+
+## Minh chứng Câu 2
+
+![Profile Intent](screenshots/cau2_profile_intent.png)
